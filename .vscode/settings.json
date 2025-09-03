@@ -1,0 +1,10 @@
+{
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "diffEditor.experimental.useTrueInlineView": true,
+    "editor.inlineCompletionsAccessibilityVerbose": false,
+    "editor.inlineSuggest.suppressSuggestions": false,
+    "editor.inlineSuggest.syntaxHighlightingEnabled": false,
+    "editor.suggest.showUsers": false,
+    "editor.suggest.showInlineDetails": false,
+    "editor.inlineSuggest.edits.codeShifting": false
+}
