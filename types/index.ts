@@ -1,6 +1,6 @@
 
 import { MouseEventHandler } from "react";
-
+import { Dispatch, SetStateAction } from "react"; // pentru setFilter
 export interface CustomButtonProps {
     title: string;
     containerStyles?: string;
@@ -47,10 +47,11 @@ export interface OptionProps {
 export interface CustomFilterProps {
     title: string;
     options: OptionProps[];
+    setFilter: Dispatch<SetStateAction<string>> | Dispatch<SetStateAction<number>> | ((filter: string | number) => void);
 
 }
 export interface ShowMoreProps {
     pageNumber: number;
     isNext: boolean;
-
+    setLimit: (limit: number) => void;
 }
