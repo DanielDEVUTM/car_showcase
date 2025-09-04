@@ -6,5 +6,5 @@
     "editor.inlineSuggest.syntaxHighlightingEnabled": false,
     "editor.suggest.showUsers": false,
     "editor.suggest.showInlineDetails": false,
-    "editor.inlineSuggest.edits.codeShifting": false
+    "editor.inlineSuggest.edits.allowCodeShifting": "never"
 }

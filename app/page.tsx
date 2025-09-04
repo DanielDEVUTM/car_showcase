@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { Hero, SearchBar, CustomFilter, CarCard } from '@/components'
 import { fetchCars } from '@/utils'
+import cars from  "@/utils/cars.json"
 
-
-export default  async function Home() {
+export default async function Home() {
   const allCars = await fetchCars();
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
