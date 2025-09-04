@@ -3,6 +3,7 @@ import { Hero, SearchBar, CustomFilter, CarCard } from '@/components';
 import { fetchCars } from '@/utils';
 import cars from  "@/utils/cars.json";
 import { manufacturers, fuels, yearsOfProduction } from '@/constants';
+import ShowMore from '@/components/ShowMore';
 
 export default async function Home({ searchParams }) {
   const allCars = await fetchCars({
@@ -42,7 +43,14 @@ export default async function Home({ searchParams }) {
                     {allCars?.map((car) => (<CarCard car={car}/>))}
 
                   </div>
+                  <ShowMore
+                    pageNumber={(searchParams.limit|| 10) / 10}
+                    isNext={(searchParams.limit || 10) > allCars.length}
+
+
+                  />
                  
+
                 </section>
         
               ): (
@@ -51,6 +59,7 @@ export default async function Home({ searchParams }) {
                   <p>{allCars?.message}</p>
                 </div>
               )}
+
 
       </div>
 
